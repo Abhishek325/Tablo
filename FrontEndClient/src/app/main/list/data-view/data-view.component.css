@@ -1,0 +1,7 @@
+td > i {
+  cursor: pointer;
+}
+
+.fa-trash:hover {
+  color: #f00;
+}

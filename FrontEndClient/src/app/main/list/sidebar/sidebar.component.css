@@ -1,0 +1,11 @@
+.list-group-item {
+  cursor: pointer;
+  border: none;
+  border-bottom: 1px solid #dedede;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.list-group-item:hover {
+  background: #dedede;
+}

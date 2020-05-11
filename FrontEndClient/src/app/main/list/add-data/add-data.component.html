@@ -1,0 +1,18 @@
+<div class="px-3" *ngIf="tableSchema">
+  <p class="lead">Please fill in the form and hit Save.</p>
+  <div class="form-row">
+    <div class="form-group col-md-4" *ngFor="let field of tableSchema.fields;let i=index">
+      <label [for]="field.id">{{field.name}}</label>
+      <input type="text" [(ngModel)]="tableSchema.fields[i].value" class="form-control" [id]="field.id"
+        style="font-size: 13px;">
+    </div>
+    <div class="form-group col-md-12 text-center">
+      <button class="btn btn-primary" (click)="save()">
+        <span *ngIf="!isLoading">Save</span>
+        <span *ngIf="isLoading">
+          <i class="fa fa-spinner fa-spin"></i> Saving
+        </span>
+      </button>
+    </div>
+  </div>
+</div>

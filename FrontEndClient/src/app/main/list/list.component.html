@@ -1,0 +1,25 @@
+<div class="row">
+  <div class="col-md-2 p-0" style="height: 85vh;border-right: 1px solid #dfdfdf;overflow-y: auto;">
+    <app-sidebar></app-sidebar>
+  </div>
+  <div class="col-md-10 pl-2" *ngIf="isTableSelected">
+    <div class="text-center">
+      <div class="btn-group mx-auto mb-2" role="group" aria-label="Basic example">
+        <button type="button" (click)="isViewTypeList = true" class="btn btn-sm"
+          [ngClass]="{'btn-primary': isViewTypeList,'btn-outline-primary': !isViewTypeList}">
+          <i class="fa fa-list"></i> List records
+        </button>
+        <button type="button" (click)="isViewTypeList = false" class="btn btn-sm"
+          [ngClass]="{'btn-primary': !isViewTypeList,'btn-outline-primary': isViewTypeList}">
+          <i class="fa fa-plus"></i> Add new
+        </button>
+      </div>
+    </div>
+    <app-add-data *ngIf="!isViewTypeList" [id]="selectedTableId" (OnDataInserted)="isViewTypeList = true">
+    </app-add-data>
+    <app-data-view *ngIf="isViewTypeList" [id]="selectedTableId"></app-data-view>
+  </div>
+  <div class="col-md-10 text-center" *ngIf="!isTableSelected">
+    <p class="lead mt-2 vertically-centered">Please select a table template from sidebar!</p>
+  </div>
+</div>

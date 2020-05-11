@@ -1,0 +1,36 @@
+<div class="col-md-12 text-center" *ngIf="isLoading">
+  <h5><i class="fa fa-spinner fa-spin"></i> Fetching details...</h5>
+</div>
+<div class="mx-auto col-md-6" *ngIf="!isLoading">
+  <label>Table details</label>
+  <input type="text" class="form-control" [(ngModel)]="table.name" placeholder="Table name">
+  <p>
+    <small class="text-grey mt-1">
+      The table name should have a meaningful name as as per the data it will store
+    </small>
+  </p>
+
+  <label class="mr-2">Fields : </label>
+  <div *ngIf="table.fields && table.fields.length>0">
+    <div class="input-group mb-2" *ngFor="let field of table.fields;let i = index;">
+      <input type="text" class="form-control" [(ngModel)]="table.fields[i].name" placeholder="Field name"
+        style="font-size: 13px;">
+      <div class="input-group-append">
+        <span class="input-group-text" [id]="field.name" (click)="removeField(field.id)">
+          <i class="fa fa-trash"></i>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <button class="btn btn-sm btn-primary" (click)="addField()">+ Add new field</button>
+  <hr>
+  <div class="text-center">
+    <button class="btn btn-sm btn-light mr-2" routerLink="/configure">Go back</button>
+    <button class="btn btn-sm btn-primary" (click)="save()" [disabled]="!table.name">
+      <span *ngIf="isSaving"><i class="fa fa-spinner fa-spin"></i> Saving</span>
+      <span *ngIf="!isSaving">Save</span>
+    </button>
+    <button class="btn btn-sm btn-danger ml-2" (click)="delete()">Delete</button>
+  </div>
+</div>

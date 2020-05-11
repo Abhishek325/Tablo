@@ -1,0 +1,22 @@
+<div class="table-responsive mt-2" *ngIf="!isLoading">
+  <table class="table table-sm table-hover">
+    <thead>
+      <tr>
+        <th scope="col" *ngFor="let column of columns">{{column}}</th>
+        <th scope="col" class="text-center">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let dataRow of dataSet">
+        <td *ngFor="let item of dataRow" style="font-size: 13px;">{{ item.field_value}}</td>
+        <td class="text-center">
+          <i class="fa fa-trash" title="Delete" (click)="deleteRecord(dataRow[0].record_id)"></i>
+        </td>
+      </tr>
+      <tr *ngIf="dataSet.length==0" class="text-grey text-small">No records found</tr>
+    </tbody>
+  </table>
+</div>
+<div class="text-center mt-2" *ngIf="isLoading">
+  <i class="fa fa-spinner fa-spin"></i> Loading....
+</div>

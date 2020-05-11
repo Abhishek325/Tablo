@@ -1,0 +1,11 @@
+<div class="card text-center mb-4">
+  <div class="card-body">
+    <h5 class="card-title">{{name}}</h5>
+    <p class="card-text">
+      <small class="text-muted">{{fields}} field<span *ngIf="fields>1">s</span>
+        <span class="font-weight-light mx-2" style="color:#ccc">|</span>Created on
+        {{ createdOn | date: 'MMM dd, yyyy'}}
+      </small>
+    </p>
+  </div>
+</div>

@@ -1,0 +1,39 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+FrontEndClient/dist
+FrontEndClient/tmp
+FrontEndClient/out-tsc
+# dependencies
+FrontEndClient/node_modules
+Backend/node_modules
+
+# profiling files
+chrome-profiler-events.json
+speed-measure-plugin.json
+
+# IDE - VSCode
+FrontEndClient/.vscode/*
+FrontEndClient/!.vscode/settings.json
+FrontEndClient/!.vscode/tasks.json
+FrontEndClient/!.vscode/launch.json
+FrontEndClient/!.vscode/extensions.json
+FrontEndClient/.history/*
+
+# misc
+FrontEndClient/.sass-cache
+FrontEndClient/connect.lock
+FrontEndClient/coverage
+FrontEndClient/libpeerconnection.log
+FrontEndClient/npm-debug.log
+FrontEndClient/yarn-error.log
+FrontEndClient/testem.log
+FrontEndClient/typings
+*-lock.json
+*-lock.json
+
+# System Files
+FrontEndClient/.DS_Store
+FrontEndClient/Thumbs.db
+Backend/.DS_Store
+Backend/Thumbs.db

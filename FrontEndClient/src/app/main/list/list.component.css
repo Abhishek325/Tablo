@@ -1,0 +1,9 @@
+.vertically-centered {
+    margin: 0;
+    position: absolute;
+    top: 40%;
+    left: 35%;
+    text-align: center;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
