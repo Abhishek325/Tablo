@@ -1,4 +1,4 @@
-##Tablo
+## Tablo
 
 #### Back End
 
@@ -7,11 +7,11 @@
 
 Project structure:
 
-⋅⋅* **controller**: This represents the controller configuration that acts as BLL of the projects.
-⋅⋅* **migrations**: Import the sql file to setup database and tables in your `MySQL` client.
-⋅⋅* **routes**: This folder contains the route (path) configuration of the project and maps each incoming request to corresponding controller.
-⋅⋅* **utils**: Named by _utilities_, this contains `database.js` which is DB configuration of the project.
-⋅⋅\* **app.js**: This is the start point of this project.
+* controller: This represents the controller configuration that acts as BLL of the projects.
+* migrations: Import the sql file to setup database and tables in your `MySQL` client.
+* routes: This folder contains the route (path) configuration of the project and maps each incoming request to corresponding controller.
+* utils: Named by _utilities_, this contains `database.js` which is DB configuration of the project.
+* app.js: This is the start point of this project.
 
 Steps to setup this locally:
 
@@ -25,11 +25,11 @@ Steps to setup this locally:
 
 Project structure:
 
-⋅⋅* **error**: Global error components to be placed here.
-⋅⋅* **navigation**: Header/footer components places here.
-⋅⋅* **services**: This folder contains domain specific services that conencts the application to API
-⋅⋅* **AppRoutingModule.ts**: Routing configuration of the application  
-⋅⋅\* **http.interceptor.ts**: Application request inteceptor to have request making logic, authentication headers, token etc at one place.
+* error: Global error components to be placed here.
+* navigation: Header/footer components places here.
+* services: This folder contains domain specific services that conencts the application to API
+* AppRoutingModule.ts: Routing configuration of the application  
+* http.interceptor.ts: Application request inteceptor to have request making logic, authentication headers, token etc at one place.
 
 Steps to setup this locally:
 
