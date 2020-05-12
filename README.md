@@ -15,9 +15,10 @@ Project structure:
 
 Steps to setup this locally:
 
-1. Run `npm install` to install dependencies.
-2. Update `utils/database.js` to update connection details as per your DB configuration.
-3. Run `npm start` to start server locally.
+1. From the project root, navigate to `Backend`.
+2. Run `npm install` to install dependencies.
+3. Update `utils/database.js` to update connection details as per your DB configuration.
+4. Run `npm start` to start server locally.
 
 #### Front End
 
@@ -26,7 +27,7 @@ Steps to setup this locally:
 Project structure:
 
 * **error** : Global error components to be placed here.
-* **navigation** : Header/footer components places here.
+* **navigation** : Header/footer components placed here.
 * **services** : This folder contains domain specific services that conencts the application to API
 * **AppRoutingModule.ts** : Routing configuration of the application  
 * **http.interceptor.ts** : Application request inteceptor to have request making logic, authentication headers, token etc at one place.

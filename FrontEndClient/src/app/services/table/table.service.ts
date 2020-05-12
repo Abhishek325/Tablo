@@ -6,6 +6,7 @@ import { HttpClient } from '@angular/common/http';
 export class TableService {
 
   @Output() addTableObserver: EventEmitter<any> = new EventEmitter();
+  searchTerm = '';
 
   constructor(private httpClient: HttpClient) { }
 
